@@ -1,0 +1,9 @@
+v1
+RAM_PACKING,0,M512,18,18,SimpleDual,0,1,10000010,lpm_ram_dq0:inst|altsyncram:altsyncram_component|altsyncram_u3a1:auto_generated|q_a[3],
+RAM_PACKING,0,M512,18,18,SimpleDual,0,2,10000010,lpm_ram_dq0:inst|altsyncram:altsyncram_component|altsyncram_u3a1:auto_generated|q_a[2],
+RAM_PACKING,0,M512,18,18,SimpleDual,0,5,10000010,lpm_ram_dq0:inst|altsyncram:altsyncram_component|altsyncram_u3a1:auto_generated|q_a[1],
+RAM_PACKING,0,M512,18,18,SimpleDual,0,10,10000010,lpm_ram_dq0:inst|altsyncram:altsyncram_component|altsyncram_u3a1:auto_generated|q_a[0],
+RAM_PACKING,1,M512,18,18,SimpleDual,0,2,10000000,lpm_rom0:inst4|altsyncram:altsyncram_component|altsyncram_gp61:auto_generated|q_a[3],
+RAM_PACKING,1,M512,18,18,SimpleDual,0,6,10000000,lpm_rom0:inst4|altsyncram:altsyncram_component|altsyncram_gp61:auto_generated|q_a[2],
+RAM_PACKING,1,M512,18,18,SimpleDual,0,5,10000000,lpm_rom0:inst4|altsyncram:altsyncram_component|altsyncram_gp61:auto_generated|q_a[1],
+RAM_PACKING,1,M512,18,18,SimpleDual,0,13,10000000,lpm_rom0:inst4|altsyncram:altsyncram_component|altsyncram_gp61:auto_generated|q_a[0],

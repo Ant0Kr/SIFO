@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="3lab">
+		<CBX_INST_ENTRY INSTANCE_NAME="|Main|LogicUnit:inst5|lpm_counter0:inst4|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_e4i.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Main|LogicUnit:inst5|lpm_counter1:inst5|lpm_counter:lpm_counter_component" CBX_FILE_NAME="cntr_mki.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Main|LogicUnit:inst5|lpm_decode0:inst2|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_e9f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Main|LogicUnit:inst5|lpm_decode0:inst3|lpm_decode:lpm_decode_component" CBX_FILE_NAME="decode_e9f.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Main|lpm_ram_dq0:inst|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_u3a1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|Main|lpm_rom0:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_gp61.tdf"/>
+	</PROJECT>
+</LOG_ROOT>
