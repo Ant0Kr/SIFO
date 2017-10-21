@@ -1,0 +1,9 @@
+v1
+RAM_PACKING,0,M4K,4,4,TrueDual,0,3,10000000,lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_ut61:auto_generated|q_a[3],
+RAM_PACKING,0,M4K,4,4,TrueDual,0,2,10000000,lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_ut61:auto_generated|q_a[2],
+RAM_PACKING,0,M4K,4,4,TrueDual,0,1,10000000,lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_ut61:auto_generated|q_a[1],
+RAM_PACKING,0,M4K,4,4,TrueDual,0,0,10000000,lpm_rom0:inst15|altsyncram:altsyncram_component|altsyncram_ut61:auto_generated|q_a[0],
+RAM_PACKING,1,M4K,4,4,TrueDual,0,3,10000010,lpm_ram_dq1:inst52|altsyncram:altsyncram_component|altsyncram_c8a1:auto_generated|q_a[3],
+RAM_PACKING,1,M4K,4,4,TrueDual,0,2,10000010,lpm_ram_dq1:inst52|altsyncram:altsyncram_component|altsyncram_c8a1:auto_generated|q_a[2],
+RAM_PACKING,1,M4K,4,4,TrueDual,0,1,10000010,lpm_ram_dq1:inst52|altsyncram:altsyncram_component|altsyncram_c8a1:auto_generated|q_a[1],
+RAM_PACKING,1,M4K,4,4,TrueDual,0,0,10000010,lpm_ram_dq1:inst52|altsyncram:altsyncram_component|altsyncram_c8a1:auto_generated|q_a[0],
