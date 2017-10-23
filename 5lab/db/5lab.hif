@@ -1,0 +1,675 @@
+Quartus II
+Version 9.1 Build 222 10/21/2009 SJ Web Edition
+7
+3500
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+lpm_bustri0
+# storage
+db|5lab.(1).cnf
+db|5lab.(1).cnf
+# case_insensitive
+# source_file
+lpm_bustri0.tdf
+e6a721dc56b2f30ec3765875fa5e6b
+7
+# used_port {
+tridata3
+-1
+3
+tridata2
+-1
+3
+tridata1
+-1
+3
+tridata0
+-1
+3
+enabledt
+-1
+3
+data2
+-1
+1
+data0
+-1
+1
+data3
+-1
+2
+data1
+-1
+2
+}
+# include_file {
+lpm_bustri.inc
+e542f5adf6af653bd181242b9785544
+}
+# macro_sequence
+
+# end
+# entity
+lpm_bustri
+# storage
+db|5lab.(2).cnf
+db|5lab.(2).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_bustri.tdf
+9e81b53c45b3aeaef540b95aa6d11233
+7
+# user_parameter {
+LPM_WIDTH
+4
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+tridata3
+-1
+3
+tridata2
+-1
+3
+tridata1
+-1
+3
+tridata0
+-1
+3
+enabledt
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# hierarchies {
+device:inst22|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+device:inst24|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+device:inst23|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+deviceLast:inst26|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component
+}
+# macro_sequence
+
+# end
+# entity
+lpm_bustri0
+# storage
+db|5lab.(4).cnf
+db|5lab.(4).cnf
+# case_insensitive
+# source_file
+lpm_bustri0.tdf
+e6a721dc56b2f30ec3765875fa5e6b
+7
+# used_port {
+tridata3
+-1
+3
+tridata2
+-1
+3
+tridata1
+-1
+3
+tridata0
+-1
+3
+enabledt
+-1
+3
+data2
+-1
+1
+data3
+-1
+2
+data1
+-1
+2
+data0
+-1
+2
+}
+# include_file {
+lpm_bustri.inc
+e542f5adf6af653bd181242b9785544
+}
+# macro_sequence
+
+# end
+# entity
+lpm_ff
+# storage
+db|5lab.(5).cnf
+db|5lab.(5).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_ff.tdf
+46b042d3fd5eb2f17a9dfd3891afd1a
+7
+# user_parameter {
+LPM_WIDTH
+1
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_FFTYPE
+DFF
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+sclr
+-1
+3
+q0
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+}
+# macro_sequence
+
+# end
+# entity
+lpm_bustri0
+# storage
+db|5lab.(7).cnf
+db|5lab.(7).cnf
+# case_insensitive
+# source_file
+lpm_bustri0.tdf
+e6a721dc56b2f30ec3765875fa5e6b
+7
+# used_port {
+tridata3
+-1
+3
+tridata2
+-1
+3
+tridata1
+-1
+3
+tridata0
+-1
+3
+enabledt
+-1
+3
+data1
+-1
+1
+data0
+-1
+1
+data3
+-1
+2
+data2
+-1
+2
+}
+# include_file {
+lpm_bustri.inc
+e542f5adf6af653bd181242b9785544
+}
+# macro_sequence
+
+# end
+# entity
+lpm_bustri0
+# storage
+db|5lab.(8).cnf
+db|5lab.(8).cnf
+# case_insensitive
+# source_file
+lpm_bustri0.tdf
+e6a721dc56b2f30ec3765875fa5e6b
+7
+# used_port {
+tridata3
+-1
+3
+tridata2
+-1
+3
+tridata1
+-1
+3
+tridata0
+-1
+3
+enabledt
+-1
+3
+data1
+-1
+1
+data3
+-1
+2
+data2
+-1
+2
+data0
+-1
+2
+}
+# include_file {
+lpm_bustri.inc
+e542f5adf6af653bd181242b9785544
+}
+# macro_sequence
+
+# end
+# entity
+device1
+# storage
+db|5lab.(3).cnf
+db|5lab.(3).cnf
+# case_insensitive
+# source_file
+device1.bdf
+f97607c479520ae89686b8644211ce
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+lpm_dff0
+# storage
+db|5lab.(9).cnf
+db|5lab.(9).cnf
+# case_insensitive
+# source_file
+lpm_dff0.tdf
+8b232204e9e835ba062bf9f63face1
+7
+# used_port {
+q
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+data
+-1
+2
+}
+# include_file {
+lpm_ff.inc
+5b1f18ec4f969a147b22e8c42bf962ac
+}
+# hierarchies {
+device:inst22|lpm_dff0:inst1
+device:inst24|lpm_dff0:inst1
+device:inst23|lpm_dff0:inst1
+deviceLast:inst26|lpm_dff0:inst1
+}
+# macro_sequence
+
+# end
+# entity
+lpm_ff
+# storage
+db|5lab.(12).cnf
+db|5lab.(12).cnf
+# case_insensitive
+# source_file
+c:|altera|91|quartus|libraries|megafunctions|lpm_ff.tdf
+46b042d3fd5eb2f17a9dfd3891afd1a
+7
+# user_parameter {
+LPM_WIDTH
+1
+PARAMETER_UNKNOWN
+USR
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_FFTYPE
+DFF
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Stratix II
+PARAMETER_UNKNOWN
+USR
+CBXI_PARAMETER
+NOTHING
+PARAMETER_UNKNOWN
+DEF
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+}
+# used_port {
+q0
+-1
+3
+data0
+-1
+3
+clock
+-1
+3
+aclr
+-1
+3
+}
+# hierarchies {
+device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component
+}
+# macro_sequence
+
+# end
+# entity
+lpm_dff0
+# storage
+db|5lab.(13).cnf
+db|5lab.(13).cnf
+# case_insensitive
+# source_file
+lpm_dff0.tdf
+8b232204e9e835ba062bf9f63face1
+7
+# used_port {
+sclr
+-1
+3
+q
+-1
+3
+clock
+-1
+3
+data
+-1
+2
+}
+# include_file {
+lpm_ff.inc
+5b1f18ec4f969a147b22e8c42bf962ac
+}
+# macro_sequence
+
+# end
+# entity
+device3
+# storage
+db|5lab.(6).cnf
+db|5lab.(6).cnf
+# case_insensitive
+# source_file
+device3.bdf
+e85611bcf4ea6e99149cf5aeba43d2b
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+device2
+# storage
+db|5lab.(10).cnf
+db|5lab.(10).cnf
+# case_insensitive
+# source_file
+device2.bdf
+d5eef381e97e90e9bd843543d4e7e8
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+device4
+# storage
+db|5lab.(11).cnf
+db|5lab.(11).cnf
+# case_insensitive
+# source_file
+device4.bdf
+285032fa8891e9df86d7dffef7b9886
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+lpm_bustri0
+# storage
+db|5lab.(14).cnf
+db|5lab.(14).cnf
+# case_insensitive
+# source_file
+lpm_bustri0.tdf
+e6a721dc56b2f30ec3765875fa5e6b
+7
+# used_port {
+tridata3
+-1
+3
+tridata2
+-1
+3
+tridata1
+-1
+3
+tridata0
+-1
+3
+enabledt
+-1
+3
+data3
+-1
+3
+data2
+-1
+3
+data1
+-1
+3
+data0
+-1
+3
+}
+# include_file {
+lpm_bustri.inc
+e542f5adf6af653bd181242b9785544
+}
+# hierarchies {
+device:inst22|lpm_bustri0:inst2
+device:inst24|lpm_bustri0:inst2
+device:inst23|lpm_bustri0:inst2
+deviceLast:inst26|lpm_bustri0:inst2
+}
+# macro_sequence
+
+# end
+# entity
+deviceLast
+# storage
+db|5lab.(15).cnf
+db|5lab.(15).cnf
+# case_insensitive
+# source_file
+devicelast.bdf
+3111c670f4db35768fc1abc5e944c25
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+deviceLast:inst26
+}
+# macro_sequence
+
+# end
+# entity
+arbitrator
+# storage
+db|5lab.(16).cnf
+db|5lab.(16).cnf
+# case_insensitive
+# source_file
+arbitrator.bdf
+b8884773eca1dc58ffe2de2f308197fd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+arbitrator:inst27
+}
+# macro_sequence
+
+# end
+# entity
+device
+# storage
+db|5lab.(0).cnf
+db|5lab.(0).cnf
+# case_insensitive
+# source_file
+device.bdf
+83a513fe8f46c67ea75b20434582a52
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+device:inst22
+device:inst24
+device:inst23
+}
+# macro_sequence
+
+# end
+# entity
+Main
+# storage
+db|5lab.(17).cnf
+db|5lab.(17).cnf
+# case_insensitive
+# source_file
+main.bdf
+70c46ec49cd88e7d09dae46a8fb18fd
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+

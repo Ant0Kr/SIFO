@@ -1,0 +1,286 @@
+Classic Timing Analyzer report for 5lab
+Tue Oct 24 00:21:10 2017
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. tco
+  7. tpd
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                            ;
++------------------------------+-------+---------------+-------------+--------------------------------------------------------------+---------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time ; From                                                         ; To      ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+-------------+--------------------------------------------------------------+---------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 13.485 ns   ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[2] ; request2   ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 8.767 ns    ; outp1[0]                                                     ; data[0] ; --         ; --       ; 0            ;
+; Total number of failed paths ;       ;               ;             ;                                                              ;         ;            ;          ; 0            ;
++------------------------------+-------+---------------+-------------+--------------------------------------------------------------+---------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; request1        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; request3        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; request4        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; request2        ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                           ;
++-------+--------------+------------+------------------------------------------------------------------+-----------+------------+
+; Slack ; Required tco ; Actual tco ; From                                                             ; To        ; From Clock ;
++-------+--------------+------------+------------------------------------------------------------------+-----------+------------+
+; N/A   ; None         ; 13.485 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request2   ;
+; N/A   ; None         ; 13.289 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request4   ;
+; N/A   ; None         ; 13.281 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request1   ;
+; N/A   ; None         ; 13.214 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request2   ;
+; N/A   ; None         ; 13.211 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request3   ;
+; N/A   ; None         ; 13.171 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request2   ;
+; N/A   ; None         ; 13.018 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request4   ;
+; N/A   ; None         ; 13.010 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request1   ;
+; N/A   ; None         ; 12.975 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request4   ;
+; N/A   ; None         ; 12.967 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request1   ;
+; N/A   ; None         ; 12.940 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request3   ;
+; N/A   ; None         ; 12.897 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request3   ;
+; N/A   ; None         ; 12.828 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request2   ;
+; N/A   ; None         ; 12.632 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request4   ;
+; N/A   ; None         ; 12.624 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request1   ;
+; N/A   ; None         ; 12.554 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request3   ;
+; N/A   ; None         ; 11.901 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy1 ; request2   ;
+; N/A   ; None         ; 11.705 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy1 ; request4   ;
+; N/A   ; None         ; 11.697 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy1 ; request1   ;
+; N/A   ; None         ; 11.696 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request2   ;
+; N/A   ; None         ; 11.674 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request2   ;
+; N/A   ; None         ; 11.627 ns  ; device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy1 ; request3   ;
+; N/A   ; None         ; 11.546 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request2   ;
+; N/A   ; None         ; 11.500 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request4   ;
+; N/A   ; None         ; 11.492 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request1   ;
+; N/A   ; None         ; 11.478 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request4   ;
+; N/A   ; None         ; 11.470 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request1   ;
+; N/A   ; None         ; 11.422 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request3   ;
+; N/A   ; None         ; 11.400 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request3   ;
+; N/A   ; None         ; 11.374 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request2   ;
+; N/A   ; None         ; 11.350 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request4   ;
+; N/A   ; None         ; 11.342 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request1   ;
+; N/A   ; None         ; 11.272 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request3   ;
+; N/A   ; None         ; 11.178 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request4   ;
+; N/A   ; None         ; 11.170 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request1   ;
+; N/A   ; None         ; 11.100 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request3   ;
+; N/A   ; None         ; 10.785 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy3 ; request2   ;
+; N/A   ; None         ; 10.589 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy3 ; request4   ;
+; N/A   ; None         ; 10.581 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy3 ; request1   ;
+; N/A   ; None         ; 10.511 ns  ; device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy3 ; request3   ;
+; N/A   ; None         ; 9.783 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; bus_busy4 ; request2   ;
+; N/A   ; None         ; 9.587 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; bus_busy4 ; request4   ;
+; N/A   ; None         ; 9.579 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; bus_busy4 ; request1   ;
+; N/A   ; None         ; 9.509 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; bus_busy4 ; request3   ;
+; N/A   ; None         ; 9.327 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[3]   ; request2   ;
+; N/A   ; None         ; 9.131 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[3]   ; request4   ;
+; N/A   ; None         ; 9.123 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[3]   ; request1   ;
+; N/A   ; None         ; 9.053 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[3]   ; request3   ;
+; N/A   ; None         ; 8.939 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[2]   ; request2   ;
+; N/A   ; None         ; 8.840 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[0]   ; request2   ;
+; N/A   ; None         ; 8.743 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[2]   ; request4   ;
+; N/A   ; None         ; 8.735 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[2]   ; request1   ;
+; N/A   ; None         ; 8.665 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[2]   ; request3   ;
+; N/A   ; None         ; 8.644 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[0]   ; request4   ;
+; N/A   ; None         ; 8.640 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[1]   ; request2   ;
+; N/A   ; None         ; 8.636 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[0]   ; request1   ;
+; N/A   ; None         ; 8.566 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[0]   ; request3   ;
+; N/A   ; None         ; 8.444 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[1]   ; request4   ;
+; N/A   ; None         ; 8.436 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[1]   ; request1   ;
+; N/A   ; None         ; 8.366 ns   ; deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0] ; data[1]   ; request3   ;
+; N/A   ; None         ; 7.179 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request2   ;
+; N/A   ; None         ; 7.161 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request2   ;
+; N/A   ; None         ; 7.070 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request2   ;
+; N/A   ; None         ; 6.983 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request4   ;
+; N/A   ; None         ; 6.975 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request1   ;
+; N/A   ; None         ; 6.965 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request4   ;
+; N/A   ; None         ; 6.957 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request1   ;
+; N/A   ; None         ; 6.922 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request2   ;
+; N/A   ; None         ; 6.905 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[3]   ; request3   ;
+; N/A   ; None         ; 6.887 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[1]   ; request3   ;
+; N/A   ; None         ; 6.874 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request4   ;
+; N/A   ; None         ; 6.866 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request1   ;
+; N/A   ; None         ; 6.796 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[0]   ; request3   ;
+; N/A   ; None         ; 6.726 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request4   ;
+; N/A   ; None         ; 6.718 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request1   ;
+; N/A   ; None         ; 6.648 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; data[2]   ; request3   ;
+; N/A   ; None         ; 6.322 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy2 ; request2   ;
+; N/A   ; None         ; 6.126 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy2 ; request4   ;
+; N/A   ; None         ; 6.118 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy2 ; request1   ;
+; N/A   ; None         ; 6.048 ns   ; device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]     ; bus_busy2 ; request3   ;
++-------+--------------+------------+------------------------------------------------------------------+-----------+------------+
+
+
++------------------------------------------------------------------+
+; tpd                                                              ;
++-------+-------------------+-----------------+----------+---------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From     ; To      ;
++-------+-------------------+-----------------+----------+---------+
+; N/A   ; None              ; 8.767 ns        ; outp1[0] ; data[0] ;
+; N/A   ; None              ; 8.691 ns        ; outp1[1] ; data[1] ;
+; N/A   ; None              ; 8.577 ns        ; outp1[3] ; data[3] ;
+; N/A   ; None              ; 8.308 ns        ; outp1[2] ; data[2] ;
+; N/A   ; None              ; 8.197 ns        ; outp3[1] ; data[1] ;
+; N/A   ; None              ; 8.150 ns        ; outp3[0] ; data[0] ;
+; N/A   ; None              ; 7.910 ns        ; outp4[3] ; data[3] ;
+; N/A   ; None              ; 7.888 ns        ; outp3[3] ; data[3] ;
+; N/A   ; None              ; 7.867 ns        ; outp4[0] ; data[0] ;
+; N/A   ; None              ; 7.844 ns        ; outp2[3] ; data[3] ;
+; N/A   ; None              ; 7.740 ns        ; outp3[2] ; data[2] ;
+; N/A   ; None              ; 7.621 ns        ; outp4[1] ; data[1] ;
+; N/A   ; None              ; 7.570 ns        ; outp4[2] ; data[2] ;
+; N/A   ; None              ; 7.567 ns        ; outp2[0] ; data[0] ;
+; N/A   ; None              ; 7.548 ns        ; outp2[1] ; data[1] ;
+; N/A   ; None              ; 7.430 ns        ; outp2[2] ; data[2] ;
++-------+-------------------+-----------------+----------+---------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Tue Oct 24 00:21:09 2017
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off 5lab -c 5lab --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "request1" is an undefined clock
+    Info: Assuming node "request3" is an undefined clock
+    Info: Assuming node "request4" is an undefined clock
+    Info: Assuming node "request2" is an undefined clock
+Warning: Found 13 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "device:inst24|inst9~0" as buffer
+    Info: Detected gated clock "deviceLast:inst26|inst9~0" as buffer
+    Info: Detected gated clock "device:inst22|inst9~2" as buffer
+    Info: Detected gated clock "device:inst22|inst11~0" as buffer
+    Info: Detected gated clock "device:inst24|inst9" as buffer
+    Info: Detected gated clock "deviceLast:inst26|inst9" as buffer
+    Info: Detected gated clock "device:inst23|inst9" as buffer
+    Info: Detected ripple clock "device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]" as buffer
+    Info: Detected ripple clock "deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]" as buffer
+    Info: Detected ripple clock "device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]" as buffer
+    Info: Detected gated clock "device:inst22|inst9~0" as buffer
+    Info: Detected gated clock "device:inst22|inst9" as buffer
+    Info: Detected ripple clock "device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]" as buffer
+Info: No valid register-to-register data paths exist for clock "request1"
+Info: No valid register-to-register data paths exist for clock "request3"
+Info: No valid register-to-register data paths exist for clock "request4"
+Info: No valid register-to-register data paths exist for clock "request2"
+Info: tco from clock "request2" to destination pin "data[2]" through register "device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]" is 13.485 ns
+    Info: + Longest clock path from clock "request2" to source register is 9.302 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.837 ns) = 0.837 ns; Loc. = PIN_W13; Fanout = 5; CLK Node = 'request2'
+        Info: 2: + IC(1.086 ns) + CELL(0.228 ns) = 2.151 ns; Loc. = LCCOMB_X17_Y1_N24; Fanout = 2; COMB Node = 'device:inst22|inst11~0'
+        Info: 3: + IC(0.256 ns) + CELL(0.228 ns) = 2.635 ns; Loc. = LCCOMB_X17_Y1_N26; Fanout = 1; COMB Node = 'device:inst23|inst9'
+        Info: 4: + IC(0.213 ns) + CELL(0.712 ns) = 3.560 ns; Loc. = LCFF_X17_Y1_N23; Fanout = 9; REG Node = 'device:inst23|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: 5: + IC(0.255 ns) + CELL(0.225 ns) = 4.040 ns; Loc. = LCCOMB_X17_Y1_N8; Fanout = 1; COMB Node = 'deviceLast:inst26|inst9~0'
+        Info: 6: + IC(0.239 ns) + CELL(0.228 ns) = 4.507 ns; Loc. = LCCOMB_X17_Y1_N20; Fanout = 1; COMB Node = 'deviceLast:inst26|inst9'
+        Info: 7: + IC(0.306 ns) + CELL(0.712 ns) = 5.525 ns; Loc. = LCFF_X18_Y1_N25; Fanout = 8; REG Node = 'deviceLast:inst26|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: 8: + IC(0.326 ns) + CELL(0.225 ns) = 6.076 ns; Loc. = LCCOMB_X17_Y1_N14; Fanout = 2; COMB Node = 'device:inst22|inst9~2'
+        Info: 9: + IC(0.242 ns) + CELL(0.272 ns) = 6.590 ns; Loc. = LCCOMB_X17_Y1_N4; Fanout = 1; COMB Node = 'device:inst24|inst9'
+        Info: 10: + IC(0.306 ns) + CELL(0.712 ns) = 7.608 ns; Loc. = LCFF_X18_Y1_N17; Fanout = 8; REG Node = 'device:inst24|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: 11: + IC(0.314 ns) + CELL(0.053 ns) = 7.975 ns; Loc. = LCCOMB_X17_Y1_N10; Fanout = 5; COMB Node = 'device:inst22|inst9~0'
+        Info: 12: + IC(0.259 ns) + CELL(0.228 ns) = 8.462 ns; Loc. = LCCOMB_X17_Y1_N2; Fanout = 1; COMB Node = 'device:inst22|inst9'
+        Info: 13: + IC(0.222 ns) + CELL(0.618 ns) = 9.302 ns; Loc. = LCFF_X17_Y1_N29; Fanout = 9; REG Node = 'device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: Total cell delay = 5.278 ns ( 56.74 % )
+        Info: Total interconnect delay = 4.024 ns ( 43.26 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 4.089 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X17_Y1_N29; Fanout = 9; REG Node = 'device:inst22|lpm_dff0:inst1|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: 2: + IC(0.722 ns) + CELL(0.228 ns) = 0.950 ns; Loc. = LCCOMB_X17_Y1_N30; Fanout = 1; COMB Node = 'device:inst23|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component|dout[2]~6'
+        Info: 3: + IC(0.304 ns) + CELL(0.225 ns) = 1.479 ns; Loc. = LCCOMB_X17_Y1_N18; Fanout = 1; COMB Node = 'device:inst23|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component|dout[2]~7'
+        Info: 4: + IC(0.638 ns) + CELL(1.972 ns) = 4.089 ns; Loc. = PIN_AA15; Fanout = 0; PIN Node = 'data[2]'
+        Info: Total cell delay = 2.425 ns ( 59.31 % )
+        Info: Total interconnect delay = 1.664 ns ( 40.69 % )
+Info: Longest tpd from source pin "outp1[0]" to destination pin "data[0]" is 8.767 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.799 ns) = 0.799 ns; Loc. = PIN_D13; Fanout = 1; PIN Node = 'outp1[0]'
+    Info: 2: + IC(4.515 ns) + CELL(0.225 ns) = 5.539 ns; Loc. = LCCOMB_X18_Y1_N10; Fanout = 1; COMB Node = 'device:inst23|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component|dout[0]~10'
+    Info: 3: + IC(0.308 ns) + CELL(0.225 ns) = 6.072 ns; Loc. = LCCOMB_X18_Y1_N18; Fanout = 1; COMB Node = 'device:inst23|lpm_bustri0:inst2|lpm_bustri:lpm_bustri_component|dout[0]~11'
+    Info: 4: + IC(0.697 ns) + CELL(1.998 ns) = 8.767 ns; Loc. = PIN_AA11; Fanout = 0; PIN Node = 'data[0]'
+    Info: Total cell delay = 3.247 ns ( 37.04 % )
+    Info: Total interconnect delay = 5.520 ns ( 62.96 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 192 megabytes
+    Info: Processing ended: Tue Oct 24 00:21:10 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
