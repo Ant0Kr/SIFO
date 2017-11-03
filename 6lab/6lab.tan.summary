@@ -1,0 +1,46 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 13.835 ns
+From           : lpm_rom1:inst23|altsyncram:altsyncram_component|altsyncram_ag71:auto_generated|q_a[5]
+To             : hit
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 128.29 MHz ( period = 7.795 ns )
+From           : lpm_rom1:inst23|altsyncram:altsyncram_component|altsyncram_ag71:auto_generated|q_a[9]
+To             : lpm_ram_dq1:inst1|altsyncram:altsyncram_component|altsyncram_j0c1:auto_generated|ram_block1a0~porta_datain_reg0
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clock'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : lpm_counter1:inst9|lpm_counter:lpm_counter_component|cntr_e4i:auto_generated|safe_q[1]
+To             : lpm_rom1:inst23|altsyncram:altsyncram_component|altsyncram_ag71:auto_generated|ram_block1a1~porta_address_reg0
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 220
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 220
+
+--------------------------------------------------------------------------------------
+

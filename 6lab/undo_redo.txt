@@ -1,0 +1,142 @@
+MED
+E:\Антон\SIFO\6lab\RAM.hex
+
+	Undo Commands
+	     1.	Cells
+	     2.	Cells
+	     3.	Cells
+	     4.	Cells
+	     5.	Cells
+	     6.	Cells
+	     7.	Cells
+	     8.	Cells
+	     9.	Cells
+	    10.	Cells
+	    11.	Cells
+	    12.	Cells
+	    13.	Cells
+	    14.	Cells
+	    15.	Cells
+	    16.	Cells
+	    17.	Cells
+	    18.	Change Memory Radix
+
+
+GED
+
+	Undo Commands
+	     1.	Insert Bus
+	     2.	Insert Bus
+	     3.	Rotate 180
+	     4.	Insert Symbol
+	     5.	Delete
+	     6.	Insert Bus
+	     7.	Resize
+	     8.	Move
+	     9.	Insert Symbol
+	    10.	Insert Bus
+	    11.	Delete
+	    12.	Delete
+	    13.	Properties
+	    14.	Move
+	    15.	Insert Bus
+	    16.	Insert Bus
+	    17.	Insert Bus
+	    18.	Insert Bus
+	    19.	Insert Bus
+	    20.	Insert Bus
+	    21.	Insert Bus
+	    22.	Delete
+	    23.	Insert Bus
+	    24.	Insert Bus
+	    25.	Insert Symbol
+	    26.	Delete
+	    27.	Delete
+	    28.	Delete
+	    29.	Delete
+	    30.	Delete
+	    31.	Delete
+	    32.	Delete
+	    33.	Insert Node
+	    34.	Delete
+	    35.	Insert Bus
+	    36.	Insert Bus
+	    37.	Insert Bus
+	    38.	Insert Bus
+	    39.	Insert Bus
+	    40.	Insert Bus
+	    41.	Insert Bus
+	    42.	Insert Bus
+	    43.	Insert Bus
+	    44.	Insert Bus
+	    45.	Insert Bus
+	    46.	Insert Bus
+	    47.	Insert Bus
+	    48.	Insert Bus
+	    49.	Insert Bus
+	    50.	Insert Bus
+	    51.	Insert Bus
+	    52.	Insert Bus
+	    53.	Insert Bus
+	    54.	Insert Bus
+	    55.	Insert Bus
+	    56.	Insert Bus
+	    57.	Insert Bus
+	    58.	Insert Bus
+	    59.	Insert Bus
+	    60.	Insert Bus
+	    61.	Insert Bus
+	    62.	Insert Bus
+	    63.	Insert Bus
+	    64.	Insert Bus
+	    65.	Insert Bus
+	    66.	Insert Bus
+	    67.	Insert Bus
+	    68.	Insert Bus
+	    69.	Insert Bus
+	    70.	Insert Bus
+	    71.	Insert Bus
+	    72.	Insert Bus
+	    73.	Insert Bus
+	    74.	Insert Bus
+	    75.	Insert Bus
+	    76.	Insert Bus
+	    77.	Insert Bus
+	    78.	Insert Bus
+	    79.	Insert Bus
+	    80.	Insert Bus
+	    81.	Insert Bus
+	    82.	Insert Bus
+	    83.	Insert Bus
+	    84.	Move
+	    85.	Paste
+	    86.	Move
+	    87.	Paste
+	    88.	Move
+	    89.	Paste
+	    90.	Move
+	    91.	Paste
+	    92.	Move
+	    93.	Paste
+	    94.	Move
+	    95.	Paste
+	    96.	Move
+	    97.	Paste
+	    98.	Delete
+	    99.	Delete
+	   100.	Delete
+
+
+GED
+
+	Undo Commands
+	     1.	Update Symbol or Block
+	     2.	Insert Symbol
+
+
+RPW
+
+	Undo Commands
+	     1.	||Compilation Report||Flow Summary
+
+
