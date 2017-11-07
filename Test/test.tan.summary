@@ -1,0 +1,76 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 1.713 ns
+From           : vcc
+To             : Cache:inst95|lpm_dff1:inst295|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 30.435 ns
+From           : Cache:inst95|lpm_dff0:inst11|lpm_ff:lpm_ff_component|dffs[0]
+To             : data[0]
+From Clock     : clock
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case tpd
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.636 ns
+From           : clock
+To             : ram_input_clk
+From Clock     : --
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 16.636 ns
+From           : vcc
+To             : Cache:inst95|lpm_dff1:inst294|lpm_ff:lpm_ff_component|dffs[0]
+From Clock     : --
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clock'
+Slack          : N/A
+Required Time  : None
+Actual Time    : 47.67 MHz ( period = 20.976 ns )
+From           : Cache:inst95|lpm_dff0:inst64|lpm_ff:lpm_ff_component|dffs[2]
+To             : Cache:inst95|lpm_dff0:inst63|lpm_ff:lpm_ff_component|dffs[2]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clock'
+Slack          : Not operational: Clock Skew > Data Delay
+Required Time  : None
+Actual Time    : N/A
+From           : lpm_dff4:inst45|lpm_ff:lpm_ff_component|dffs[14]
+To             : Cache:inst95|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[2]
+From Clock     : clock
+To Clock       : clock
+Failed Paths   : 10000
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 10000
+
+--------------------------------------------------------------------------------------
+
