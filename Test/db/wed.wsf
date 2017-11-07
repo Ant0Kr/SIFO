@@ -23,11 +23,11 @@ applicable agreement for further details.
 VECTOR("E:/Антон/SIFO/Test/test.vwf")
 {
 	ZOOM{
-		ZBEGIN = 1833530;
-		ZEND = 2333530;
+		ZBEGIN = 1218562;
+		ZEND = 1764669;
 		NUMERATOR = 835;
-		DENOMINATOR = 1000000;
-		TOP_INDEX = 2;
+		DENOMINATOR = 500000;
+		TOP_INDEX = 8;
 	}
 	CLOCK{
 		PERIOD = 10000;
