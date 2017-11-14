@@ -17,8 +17,7 @@ FUNCTION lpm_dff1
 (
 	aclr,
 	clock,
-	data,
-	enable
+	data
 )
 
 RETURNS (

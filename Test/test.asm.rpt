@@ -1,5 +1,5 @@
 Assembler report for test
-Tue Nov 07 20:47:52 2017
+Tue Nov 14 14:42:18 2017
 Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: E:/Антон/SIFO/Test/test.sof
-  6. Assembler Device Options: E:/Антон/SIFO/Test/test.pof
+  5. Assembler Device Options: D:/Test/test.sof
+  6. Assembler Device Options: D:/Test/test.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Nov 07 20:47:52 2017 ;
+; Assembler Status      ; Successful - Tue Nov 14 14:42:18 2017 ;
 ; Revision Name         ; test                                  ;
 ; Top-level Entity Name ; test                                  ;
 ; Family                ; Stratix II                            ;
@@ -79,37 +79,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+-----------------------------+
-; Assembler Generated Files   ;
-+-----------------------------+
-; File Name                   ;
-+-----------------------------+
-; E:/Антон/SIFO/Test/test.sof ;
-; E:/Антон/SIFO/Test/test.pof ;
-+-----------------------------+
++---------------------------+
+; Assembler Generated Files ;
++---------------------------+
+; File Name                 ;
++---------------------------+
+; D:/Test/test.sof          ;
+; D:/Test/test.pof          ;
++---------------------------+
 
 
-+-------------------------------------------------------+
-; Assembler Device Options: E:/Антон/SIFO/Test/test.sof ;
-+----------------+--------------------------------------+
-; Option         ; Setting                              ;
-+----------------+--------------------------------------+
-; Device         ; EP2S15F484C3                         ;
-; JTAG usercode  ; 0xFFFFFFFF                           ;
-; Checksum       ; 0x0034E103                           ;
-+----------------+--------------------------------------+
++--------------------------------------------+
+; Assembler Device Options: D:/Test/test.sof ;
++----------------+---------------------------+
+; Option         ; Setting                   ;
++----------------+---------------------------+
+; Device         ; EP2S15F484C3              ;
+; JTAG usercode  ; 0xFFFFFFFF                ;
+; Checksum       ; 0x0034A462                ;
++----------------+---------------------------+
 
 
-+-------------------------------------------------------+
-; Assembler Device Options: E:/Антон/SIFO/Test/test.pof ;
-+--------------------+----------------------------------+
-; Option             ; Setting                          ;
-+--------------------+----------------------------------+
-; Device             ; EPC16                            ;
-; JTAG usercode      ; 0xFFFFFFFF                       ;
-; Checksum           ; 0x1EC82E10                       ;
-; Compression Ratio  ; 2                                ;
-+--------------------+----------------------------------+
++--------------------------------------------+
+; Assembler Device Options: D:/Test/test.pof ;
++--------------------+-----------------------+
+; Option             ; Setting               ;
++--------------------+-----------------------+
+; Device             ; EPC16                 ;
+; JTAG usercode      ; 0xFFFFFFFF            ;
+; Checksum           ; 0x1ECD4A91            ;
+; Compression Ratio  ; 2                     ;
++--------------------+-----------------------+
 
 
 +--------------------+
@@ -118,14 +118,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
-    Info: Processing started: Tue Nov 07 20:47:47 2017
+    Info: Processing started: Tue Nov 14 14:42:15 2017
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off test -c test
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 249 megabytes
-    Info: Processing ended: Tue Nov 07 20:47:52 2017
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Tue Nov 14 14:42:18 2017
+    Info: Elapsed time: 00:00:03
+    Info: Total CPU time (on all processors): 00:00:02
 
 
