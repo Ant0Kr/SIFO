@@ -1,0 +1,420 @@
+Classic Timing Analyzer report for 8lab
+Sun Dec 03 20:20:57 2017
+Quartus II Version 9.1 Build 222 10/21/2009 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'clock'
+  7. tsu
+  8. tco
+  9. th
+ 10. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                                                                                      ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                                                            ; To                                                        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 3.508 ns                         ; result                                                          ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0] ; --         ; clock    ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 5.747 ns                         ; inst6                                                           ; prediction                                                ; clock      ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -2.270 ns                        ; result                                                          ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0] ; --         ; clock    ; 0            ;
+; Clock Setup: 'clock'         ; N/A   ; None          ; 296.82 MHz ( period = 3.369 ns ) ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0] ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0] ; clock      ; clock    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                                                 ;                                                           ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------------------------------------------+-----------------------------------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2S15F484C3       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; Off                ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; clock           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 2      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clock'                                                                                                                                                                                                                                                                                                                               ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                                                                                  ; To                                                                                    ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 296.82 MHz ( period = 3.369 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 3.180 ns                ;
+; N/A   ; 299.58 MHz ( period = 3.338 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 3.149 ns                ;
+; N/A   ; 309.41 MHz ( period = 3.232 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 3.040 ns                ;
+; N/A   ; 322.79 MHz ( period = 3.098 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.909 ns                ;
+; N/A   ; 325.10 MHz ( period = 3.076 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.887 ns                ;
+; N/A   ; 326.05 MHz ( period = 3.067 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.878 ns                ;
+; N/A   ; 326.05 MHz ( period = 3.067 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 2.878 ns                ;
+; N/A   ; 327.01 MHz ( period = 3.058 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 2.869 ns                ;
+; N/A   ; 327.98 MHz ( period = 3.049 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 2.860 ns                ;
+; N/A   ; 328.41 MHz ( period = 3.045 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.853 ns                ;
+; N/A   ; 336.47 MHz ( period = 2.972 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.783 ns                ;
+; N/A   ; 337.72 MHz ( period = 2.961 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.769 ns                ;
+; N/A   ; 337.95 MHz ( period = 2.959 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 2.770 ns                ;
+; N/A   ; 338.41 MHz ( period = 2.955 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.766 ns                ;
+; N/A   ; 339.44 MHz ( period = 2.946 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 2.757 ns                ;
+; N/A   ; 339.67 MHz ( period = 2.944 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 2.755 ns                ;
+; N/A   ; 340.14 MHz ( period = 2.940 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.751 ns                ;
+; N/A   ; 340.83 MHz ( period = 2.934 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.749 ns                ;
+; N/A   ; 341.30 MHz ( period = 2.930 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.747 ns                ;
+; N/A   ; 342.35 MHz ( period = 2.921 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.738 ns                ;
+; N/A   ; 343.88 MHz ( period = 2.908 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.720 ns                ;
+; N/A   ; 344.95 MHz ( period = 2.899 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.711 ns                ;
+; N/A   ; 346.74 MHz ( period = 2.884 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.692 ns                ;
+; N/A   ; 346.74 MHz ( period = 2.884 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.700 ns                ;
+; N/A   ; 347.10 MHz ( period = 2.881 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.698 ns                ;
+; N/A   ; 347.34 MHz ( period = 2.879 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.687 ns                ;
+; N/A   ; 347.95 MHz ( period = 2.874 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.697 ns                ;
+; N/A   ; 348.55 MHz ( period = 2.869 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.677 ns                ;
+; N/A   ; 349.04 MHz ( period = 2.865 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.688 ns                ;
+; N/A   ; 350.51 MHz ( period = 2.853 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.668 ns                ;
+; N/A   ; 351.62 MHz ( period = 2.844 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.659 ns                ;
+; N/A   ; 352.36 MHz ( period = 2.838 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.659 ns                ;
+; N/A   ; 352.86 MHz ( period = 2.834 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.646 ns                ;
+; N/A   ; 355.24 MHz ( period = 2.815 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.632 ns                ;
+; N/A   ; 356.38 MHz ( period = 2.806 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.617 ns                ;
+; N/A   ; 356.63 MHz ( period = 2.804 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.627 ns                ;
+; N/A   ; 357.02 MHz ( period = 2.801 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.624 ns                ;
+; N/A   ; 357.27 MHz ( period = 2.799 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.618 ns                ;
+; N/A   ; 359.71 MHz ( period = 2.780 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; clock      ; clock    ; None                        ; None                      ; 2.591 ns                ;
+; N/A   ; 362.19 MHz ( period = 2.761 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.569 ns                ;
+; N/A   ; 362.98 MHz ( period = 2.755 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.570 ns                ;
+; N/A   ; 363.37 MHz ( period = 2.752 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.560 ns                ;
+; N/A   ; 363.77 MHz ( period = 2.749 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.570 ns                ;
+; N/A   ; 366.97 MHz ( period = 2.725 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.544 ns                ;
+; N/A   ; 367.78 MHz ( period = 2.719 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.538 ns                ;
+; N/A   ; 368.19 MHz ( period = 2.716 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.535 ns                ;
+; N/A   ; 368.46 MHz ( period = 2.714 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.533 ns                ;
+; N/A   ; 368.46 MHz ( period = 2.714 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.530 ns                ;
+; N/A   ; 369.00 MHz ( period = 2.710 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.529 ns                ;
+; N/A   ; 369.69 MHz ( period = 2.705 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.524 ns                ;
+; N/A   ; 370.51 MHz ( period = 2.699 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.515 ns                ;
+; N/A   ; 374.25 MHz ( period = 2.672 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.492 ns                ;
+; N/A   ; 374.67 MHz ( period = 2.669 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.489 ns                ;
+; N/A   ; 375.52 MHz ( period = 2.663 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.478 ns                ;
+; N/A   ; 376.79 MHz ( period = 2.654 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.473 ns                ;
+; N/A   ; 377.50 MHz ( period = 2.649 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.466 ns                ;
+; N/A   ; 378.07 MHz ( period = 2.645 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.464 ns                ;
+; N/A   ; 378.21 MHz ( period = 2.644 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.460 ns                ;
+; N/A   ; 378.64 MHz ( period = 2.641 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.462 ns                ;
+; N/A   ; 378.64 MHz ( period = 2.641 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.460 ns                ;
+; N/A   ; 378.79 MHz ( period = 2.640 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.459 ns                ;
+; N/A   ; 378.79 MHz ( period = 2.640 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.452 ns                ;
+; N/A   ; 379.08 MHz ( period = 2.638 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.461 ns                ;
+; N/A   ; 379.79 MHz ( period = 2.633 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.452 ns                ;
+; N/A   ; 380.66 MHz ( period = 2.627 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.439 ns                ;
+; N/A   ; 380.81 MHz ( period = 2.626 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.447 ns                ;
+; N/A   ; 380.95 MHz ( period = 2.625 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.437 ns                ;
+; N/A   ; 381.68 MHz ( period = 2.620 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.440 ns                ;
+; N/A   ; 382.70 MHz ( period = 2.613 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.429 ns                ;
+; N/A   ; 383.00 MHz ( period = 2.611 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.431 ns                ;
+; N/A   ; 383.14 MHz ( period = 2.610 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.427 ns                ;
+; N/A   ; 384.91 MHz ( period = 2.598 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.419 ns                ;
+; N/A   ; 386.25 MHz ( period = 2.589 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.410 ns                ;
+; N/A   ; 386.25 MHz ( period = 2.589 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.404 ns                ;
+; N/A   ; 387.15 MHz ( period = 2.583 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.404 ns                ;
+; N/A   ; 388.20 MHz ( period = 2.576 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.396 ns                ;
+; N/A   ; 388.20 MHz ( period = 2.576 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.396 ns                ;
+; N/A   ; 389.56 MHz ( period = 2.567 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.388 ns                ;
+; N/A   ; 389.56 MHz ( period = 2.567 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.387 ns                ;
+; N/A   ; 390.17 MHz ( period = 2.563 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.375 ns                ;
+; N/A   ; 390.32 MHz ( period = 2.562 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.382 ns                ;
+; N/A   ; 391.39 MHz ( period = 2.555 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.375 ns                ;
+; N/A   ; 392.62 MHz ( period = 2.547 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.367 ns                ;
+; N/A   ; 393.08 MHz ( period = 2.544 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.364 ns                ;
+; N/A   ; 393.70 MHz ( period = 2.540 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.360 ns                ;
+; N/A   ; 395.26 MHz ( period = 2.530 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.353 ns                ;
+; N/A   ; 398.57 MHz ( period = 2.509 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.324 ns                ;
+; N/A   ; 399.04 MHz ( period = 2.506 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.326 ns                ;
+; N/A   ; 399.52 MHz ( period = 2.503 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.323 ns                ;
+; N/A   ; 400.00 MHz ( period = 2.500 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.317 ns                ;
+; N/A   ; 400.48 MHz ( period = 2.497 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.316 ns                ;
+; N/A   ; 400.96 MHz ( period = 2.494 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.309 ns                ;
+; N/A   ; 402.41 MHz ( period = 2.485 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.302 ns                ;
+; N/A   ; 402.90 MHz ( period = 2.482 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.301 ns                ;
+; N/A   ; 403.06 MHz ( period = 2.481 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.297 ns                ;
+; N/A   ; 403.55 MHz ( period = 2.478 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.294 ns                ;
+; N/A   ; 404.04 MHz ( period = 2.475 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.294 ns                ;
+; N/A   ; 404.53 MHz ( period = 2.472 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.288 ns                ;
+; N/A   ; 406.34 MHz ( period = 2.461 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.273 ns                ;
+; N/A   ; 407.83 MHz ( period = 2.452 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.272 ns                ;
+; N/A   ; 409.33 MHz ( period = 2.443 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.263 ns                ;
+; N/A   ; 409.33 MHz ( period = 2.443 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.266 ns                ;
+; N/A   ; 409.84 MHz ( period = 2.440 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.259 ns                ;
+; N/A   ; 411.86 MHz ( period = 2.428 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.251 ns                ;
+; N/A   ; 419.64 MHz ( period = 2.383 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.202 ns                ;
+; N/A   ; 420.52 MHz ( period = 2.378 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.198 ns                ;
+; N/A   ; 421.23 MHz ( period = 2.374 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.193 ns                ;
+; N/A   ; 422.12 MHz ( period = 2.369 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.188 ns                ;
+; N/A   ; 422.30 MHz ( period = 2.368 ns )               ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 2.192 ns                ;
+; N/A   ; 423.55 MHz ( period = 2.361 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.181 ns                ;
+; N/A   ; 424.27 MHz ( period = 2.357 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.177 ns                ;
+; N/A   ; 429.00 MHz ( period = 2.331 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.147 ns                ;
+; N/A   ; 430.66 MHz ( period = 2.322 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.138 ns                ;
+; N/A   ; 433.84 MHz ( period = 2.305 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.125 ns                ;
+; N/A   ; 434.22 MHz ( period = 2.303 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.119 ns                ;
+; N/A   ; 435.92 MHz ( period = 2.294 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.113 ns                ;
+; N/A   ; 437.06 MHz ( period = 2.288 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.104 ns                ;
+; N/A   ; 437.06 MHz ( period = 2.288 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.107 ns                ;
+; N/A   ; 438.79 MHz ( period = 2.279 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.098 ns                ;
+; N/A   ; 439.75 MHz ( period = 2.274 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.093 ns                ;
+; N/A   ; 439.95 MHz ( period = 2.273 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.092 ns                ;
+; N/A   ; 440.53 MHz ( period = 2.270 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.086 ns                ;
+; N/A   ; 446.43 MHz ( period = 2.240 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.056 ns                ;
+; N/A   ; 449.44 MHz ( period = 2.225 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.041 ns                ;
+; N/A   ; 457.25 MHz ( period = 2.187 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 2.007 ns                ;
+; N/A   ; 460.41 MHz ( period = 2.172 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.992 ns                ;
+; N/A   ; 464.90 MHz ( period = 2.151 ns )               ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.972 ns                ;
+; N/A   ; 467.95 MHz ( period = 2.137 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.953 ns                ;
+; N/A   ; 475.29 MHz ( period = 2.104 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.920 ns                ;
+; N/A   ; 478.47 MHz ( period = 2.090 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.910 ns                ;
+; N/A   ; 478.70 MHz ( period = 2.089 ns )               ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.900 ns                ;
+; N/A   ; 479.39 MHz ( period = 2.086 ns )               ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.906 ns                ;
+; N/A   ; 481.46 MHz ( period = 2.077 ns )               ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.893 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.795 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.695 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.687 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.682 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.664 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; clock      ; clock    ; None                        ; None                      ; 1.622 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.534 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.398 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.355 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]                               ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.353 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.331 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.267 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.259 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.250 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.178 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.085 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 1.009 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]                             ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 0.966 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; inst6                                                                                 ; clock      ; clock    ; None                        ; None                      ; 0.919 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]                       ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; clock      ; clock    ; None                        ; None                      ; 0.818 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[3]                       ; clock      ; clock    ; None                        ; None                      ; 0.774 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[1]                       ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[2]                       ; clock      ; clock    ; None                        ; None                      ; 0.769 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 0.750 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 0.715 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 0.680 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[0] ; clock      ; clock    ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[3] ; clock      ; clock    ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[2] ; clock      ; clock    ; None                        ; None                      ; 0.609 ns                ;
+; N/A   ; Restricted to 500.00 MHz ( period = 2.000 ns ) ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; lpm_counter0:inst|lpm_counter:lpm_counter_component|cntr_qlh:auto_generated|safe_q[1] ; clock      ; clock    ; None                        ; None                      ; 0.609 ns                ;
++-------+------------------------------------------------+---------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; tsu                                                                                                                     ;
++-------+--------------+------------+--------+-----------------------------------------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From   ; To                                                              ; To Clock ;
++-------+--------------+------------+--------+-----------------------------------------------------------------+----------+
+; N/A   ; None         ; 3.508 ns   ; result ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 3.316 ns   ; result ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 3.253 ns   ; result ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 3.204 ns   ; result ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 3.203 ns   ; result ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 3.201 ns   ; result ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 3.179 ns   ; result ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]         ; clock    ;
+; N/A   ; None         ; 2.993 ns   ; result ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.968 ns   ; result ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.880 ns   ; result ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0] ; clock    ;
+; N/A   ; None         ; 2.868 ns   ; result ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.866 ns   ; result ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.779 ns   ; result ; inst6                                                           ; clock    ;
+; N/A   ; None         ; 2.746 ns   ; result ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.661 ns   ; result ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.656 ns   ; result ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.614 ns   ; result ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A   ; None         ; 2.509 ns   ; result ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
++-------+--------------+------------+--------+-----------------------------------------------------------------+----------+
+
+
++---------------------------------------------------------------------+
+; tco                                                                 ;
++-------+--------------+------------+-------+------------+------------+
+; Slack ; Required tco ; Actual tco ; From  ; To         ; From Clock ;
++-------+--------------+------------+-------+------------+------------+
+; N/A   ; None         ; 5.747 ns   ; inst6 ; prediction ; clock      ;
++-------+--------------+------------+-------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; th                                                                                                                            ;
++---------------+-------------+-----------+--------+-----------------------------------------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From   ; To                                                              ; To Clock ;
++---------------+-------------+-----------+--------+-----------------------------------------------------------------+----------+
+; N/A           ; None        ; -2.270 ns ; result ; PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.375 ns ; result ; PHT:inst3|lpm_dff0:inst29|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.417 ns ; result ; PHT:inst3|lpm_dff0:inst26|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.422 ns ; result ; PHT:inst3|lpm_dff0:inst27|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.507 ns ; result ; PHT:inst3|lpm_dff0:inst28|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.540 ns ; result ; inst6                                                           ; clock    ;
+; N/A           ; None        ; -2.627 ns ; result ; PHT:inst3|lpm_dff0:inst21|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.629 ns ; result ; PHT:inst3|lpm_dff0:inst17|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.641 ns ; result ; lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0] ; clock    ;
+; N/A           ; None        ; -2.729 ns ; result ; PHT:inst3|lpm_dff0:inst24|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.754 ns ; result ; PHT:inst3|lpm_dff0:inst18|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.940 ns ; result ; PHT:inst3|lpm_dff0:inst|lpm_ff:lpm_ff_component|dffs[0]         ; clock    ;
+; N/A           ; None        ; -2.962 ns ; result ; PHT:inst3|lpm_dff0:inst30|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.964 ns ; result ; PHT:inst3|lpm_dff0:inst31|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -2.965 ns ; result ; PHT:inst3|lpm_dff0:inst22|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -3.014 ns ; result ; PHT:inst3|lpm_dff0:inst25|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -3.077 ns ; result ; PHT:inst3|lpm_dff0:inst19|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
+; N/A           ; None        ; -3.269 ns ; result ; PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]       ; clock    ;
++---------------+-------------+-----------+--------+-----------------------------------------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 222 10/21/2009 SJ Web Edition
+    Info: Processing started: Sun Dec 03 20:20:56 2017
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off 8lab -c 8lab --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "clock" is an undefined clock
+Info: Clock "clock" has Internal fmax of 296.82 MHz between source register "lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]" and destination register "PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]" (period= 3.369 ns)
+    Info: + Longest register to register delay is 3.180 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X34_Y15_N11; Fanout = 2; REG Node = 'lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]'
+        Info: 2: + IC(0.304 ns) + CELL(0.225 ns) = 0.529 ns; Loc. = LCCOMB_X34_Y15_N16; Fanout = 20; COMB Node = 'lpm_or0:inst2|lpm_or:lpm_or_component|or_node[0][1]'
+        Info: 3: + IC(0.698 ns) + CELL(0.366 ns) = 1.593 ns; Loc. = LCCOMB_X34_Y14_N14; Fanout = 1; COMB Node = 'PHT:inst3|lpm_decode0:inst16|lpm_decode:lpm_decode_component|decode_e9f:auto_generated|w_anode51w[3]~0'
+        Info: 4: + IC(0.841 ns) + CELL(0.746 ns) = 3.180 ns; Loc. = LCFF_X34_Y20_N1; Fanout = 1; REG Node = 'PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: Total cell delay = 1.337 ns ( 42.04 % )
+        Info: Total interconnect delay = 1.843 ns ( 57.96 % )
+    Info: - Smallest clock skew is -0.005 ns
+        Info: + Shortest clock path from clock "clock" to destination register is 2.482 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 25; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(0.667 ns) + CELL(0.618 ns) = 2.482 ns; Loc. = LCFF_X34_Y20_N1; Fanout = 1; REG Node = 'PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]'
+            Info: Total cell delay = 1.472 ns ( 59.31 % )
+            Info: Total interconnect delay = 1.010 ns ( 40.69 % )
+        Info: - Longest clock path from clock "clock" to source register is 2.487 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+            Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 25; COMB Node = 'clock~clkctrl'
+            Info: 3: + IC(0.672 ns) + CELL(0.618 ns) = 2.487 ns; Loc. = LCFF_X34_Y15_N11; Fanout = 2; REG Node = 'lpm_shiftreg0:inst1|lpm_shiftreg:lpm_shiftreg_component|dffs[0]'
+            Info: Total cell delay = 1.472 ns ( 59.19 % )
+            Info: Total interconnect delay = 1.015 ns ( 40.81 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Micro setup delay of destination is 0.090 ns
+Info: tsu for register "PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]" (data pin = "result", clock pin = "clock") is 3.508 ns
+    Info: + Longest pin to register delay is 5.900 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.780 ns) = 0.780 ns; Loc. = PIN_L8; Fanout = 18; PIN Node = 'result'
+        Info: 2: + IC(4.912 ns) + CELL(0.053 ns) = 5.745 ns; Loc. = LCCOMB_X34_Y20_N0; Fanout = 1; COMB Node = 'PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]~feeder'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 5.900 ns; Loc. = LCFF_X34_Y20_N1; Fanout = 1; REG Node = 'PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: Total cell delay = 0.988 ns ( 16.75 % )
+        Info: Total interconnect delay = 4.912 ns ( 83.25 % )
+    Info: + Micro setup delay of destination is 0.090 ns
+    Info: - Shortest clock path from clock "clock" to destination register is 2.482 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 25; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.667 ns) + CELL(0.618 ns) = 2.482 ns; Loc. = LCFF_X34_Y20_N1; Fanout = 1; REG Node = 'PHT:inst3|lpm_dff0:inst20|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: Total cell delay = 1.472 ns ( 59.31 % )
+        Info: Total interconnect delay = 1.010 ns ( 40.69 % )
+Info: tco from clock "clock" to destination pin "prediction" through register "inst6" is 5.747 ns
+    Info: + Longest clock path from clock "clock" to source register is 2.487 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 25; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.672 ns) + CELL(0.618 ns) = 2.487 ns; Loc. = LCFF_X34_Y15_N9; Fanout = 1; REG Node = 'inst6'
+        Info: Total cell delay = 1.472 ns ( 59.19 % )
+        Info: Total interconnect delay = 1.015 ns ( 40.81 % )
+    Info: + Micro clock to output delay of source is 0.094 ns
+    Info: + Longest register to pin delay is 3.166 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X34_Y15_N9; Fanout = 1; REG Node = 'inst6'
+        Info: 2: + IC(1.214 ns) + CELL(1.952 ns) = 3.166 ns; Loc. = PIN_E9; Fanout = 0; PIN Node = 'prediction'
+        Info: Total cell delay = 1.952 ns ( 61.66 % )
+        Info: Total interconnect delay = 1.214 ns ( 38.34 % )
+Info: th for register "PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]" (data pin = "result", clock pin = "clock") is -2.270 ns
+    Info: + Longest clock path from clock "clock" to destination register is 2.492 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.854 ns) = 0.854 ns; Loc. = PIN_N20; Fanout = 1; CLK Node = 'clock'
+        Info: 2: + IC(0.343 ns) + CELL(0.000 ns) = 1.197 ns; Loc. = CLKCTRL_G3; Fanout = 25; COMB Node = 'clock~clkctrl'
+        Info: 3: + IC(0.677 ns) + CELL(0.618 ns) = 2.492 ns; Loc. = LCFF_X35_Y14_N1; Fanout = 1; REG Node = 'PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: Total cell delay = 1.472 ns ( 59.07 % )
+        Info: Total interconnect delay = 1.020 ns ( 40.93 % )
+    Info: + Micro hold delay of destination is 0.149 ns
+    Info: - Shortest pin to register delay is 4.911 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.780 ns) = 0.780 ns; Loc. = PIN_L8; Fanout = 18; PIN Node = 'result'
+        Info: 2: + IC(3.923 ns) + CELL(0.053 ns) = 4.756 ns; Loc. = LCCOMB_X35_Y14_N0; Fanout = 1; COMB Node = 'PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]~feeder'
+        Info: 3: + IC(0.000 ns) + CELL(0.155 ns) = 4.911 ns; Loc. = LCFF_X35_Y14_N1; Fanout = 1; REG Node = 'PHT:inst3|lpm_dff0:inst23|lpm_ff:lpm_ff_component|dffs[0]'
+        Info: Total cell delay = 0.988 ns ( 20.12 % )
+        Info: Total interconnect delay = 3.923 ns ( 79.88 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 243 megabytes
+    Info: Processing ended: Sun Dec 03 20:20:57 2017
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+
